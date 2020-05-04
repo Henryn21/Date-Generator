@@ -35,7 +35,7 @@ xhr.onreadystatechange=function(){//when state changes
         console.log("done");
     }
 }
-xhr.open("GET", '//maps.googleapis.com/maps/api/place/findplacefromtext/output=json?parameters?key=AIzaSyBYZMSmO_lrxaddKipkStuvMAvuaDJoU4E');
+xhr.open("GET", '//maps.googleapis.com/maps/api/place/findplacefromtext/output=json?parameters&key=AIzaSyBYZMSmO_lrxaddKipkStuvMAvuaDJoU4E');
 xhr.send();
 
 //display results
