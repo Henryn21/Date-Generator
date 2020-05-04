@@ -4,11 +4,11 @@ let form=document.querySelector("form");
 let foodButtonDiv=document.querySelector("#food");
 console.log(foodButtonDiv);
 
-let foodButtons=querySelectorAll(".foodButton");
+let foodButtons=document.querySelectorAll(".foodButton");
 console.log(foodButtons);
 let activity;
 for(let i=0;i<foodButtons.length;i++){
-    console.log(foodButtons[i]);
+    console.log(foodButtons[i].value);
     foodButtons[i].addEventListener("Click",(e)=>{
         console.log("HI");
     });
@@ -29,6 +29,14 @@ form.addEventListener('submit',(e)=>{
 });
 
 //enter form data to google api
+xhr= new XMLHttpRequest();//request object
+xhr.onreadystatechange=function(){//when state changes
+    if(this.readyState===4 && this.status === 200) {//if done
+        console.log("done");
+    }
+}
+xhr.open("GET", '//maps.googleapis.com/maps/api/place/findplacefromtext/output=json?parameters');
+xhr.send();
 
 //display results
 // let xhr= XMLHttpRequest();
