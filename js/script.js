@@ -4,7 +4,7 @@ let form=document.querySelector("form");
 let foodButtonDiv=document.querySelector("#food");
 console.log(foodButtonDiv);
 
-let foodButtons=foodButtonDiv.childNodes;
+let foodButtons=querySelectorAll(".foodButton");
 console.log(foodButtons);
 let activity;
 for(let i=0;i<foodButtons.length;i++){
@@ -29,5 +29,6 @@ form.addEventListener('submit',(e)=>{
 });
 
 //enter form data to google api
+
 //display results
 // let xhr= XMLHttpRequest();
