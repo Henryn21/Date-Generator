@@ -36,9 +36,10 @@ xhr.onreadystatechange=function(){//when state changes
         console.log("done");
         let data=JSON.parse(xhr.responseText);
         console.log(data);
-        // for(let i=0;i<){
-
-        // }
+        for(let i=0;i<data.results.length;i++){
+            apiElements[i]=data.results[i];
+        }
+        console.log(apiElements);
     }
 }
 ////maps.googleapis.com/maps/api/place/findplacefromtext/json?key=AIzaSyBYZMSmO_lrxaddKipkStuvMAvuaDJoU4E
