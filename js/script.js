@@ -27,12 +27,18 @@ form.addEventListener('submit',(e)=>{
     console.log(food);
     console.log(activity);
 });
-
+//Bug: Places api not giving right response
 //enter form data to google api
+let apiElements=[];
 xhr= new XMLHttpRequest();//request object
 xhr.onreadystatechange=function(){//when state changes
     if(this.readyState===4 && this.status === 200) {//if done
         console.log("done");
+        let data=JSON.parse(xhr.responseText);
+        console.log(data);
+        // for(let i=0;i<){
+
+        // }
     }
 }
 ////maps.googleapis.com/maps/api/place/findplacefromtext/json?key=AIzaSyBYZMSmO_lrxaddKipkStuvMAvuaDJoU4E
