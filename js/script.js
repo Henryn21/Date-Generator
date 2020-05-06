@@ -35,7 +35,8 @@ xhr.onreadystatechange=function(){//when state changes
         console.log("done");
     }
 }
-xhr.open("GET", '//maps.googleapis.com/maps/api/place/findplacefromtext/json?key=AIzaSyBYZMSmO_lrxaddKipkStuvMAvuaDJoU4E');
+////maps.googleapis.com/maps/api/place/findplacefromtext/json?key=AIzaSyBYZMSmO_lrxaddKipkStuvMAvuaDJoU4E
+xhr.open("GET", 'https://randomuser.me/api/');
 xhr.send();
 
 //display results
