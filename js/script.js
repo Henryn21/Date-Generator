@@ -40,12 +40,23 @@ xhr.onreadystatechange=function(){//when state changes
             apiElements[i]=data.results[i];
         }
         console.log(apiElements);
+        resultsButton.style.display="block";
     }
 }
 //public api test: https://randomuser.me/api/
 ////maps.googleapis.com/maps/api/place/findplacefromtext/json?key=AIzaSyBYZMSmO_lrxaddKipkStuvMAvuaDJoU4E
-xhr.open("GET", 'maps.googleapis.com/maps/api/place/findplacefromtext/json?input=Food&key=AIzaSyBYZMSmO_lrxaddKipkStuvMAvuaDJoU4E');
+xhr.open("GET", 'https://randomuser.me/api/');
 xhr.send();
 
 //display results
+let resultsButton=document.querySelector("#results");
+resultsButton.style.display="none";
+resultsButton.addEventListener("click",(e)=>{
+    for(let i=0;i<5;i++){
+        let resultItem=document.createElement("li");
+        resultItem.innerHTML=apiElements[i];
+        document.querySelector("#resultsList").appendChild(resultItem);
+    }
+    
+});
 // let xhr= XMLHttpRequest();
