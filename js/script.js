@@ -1,4 +1,4 @@
-//get form data
+  //get form data
 let form=document.querySelector("form");
 
 let foodButtonDiv=document.querySelector("#food");
@@ -44,6 +44,7 @@ xhr.onreadystatechange=function(){//when state changes
     }
 }
 //public api test: https://randomuser.me/api/
+//google places API
 ////maps.googleapis.com/maps/api/place/findplacefromtext/json?key=AIzaSyBYZMSmO_lrxaddKipkStuvMAvuaDJoU4E
 xhr.open("GET", 'https://randomuser.me/api/');
 xhr.send();
