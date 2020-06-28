@@ -13,9 +13,25 @@ for(let i=0;i<foodButtons.length;i++){
         console.log("HI");
     });
 }
-// foodButtons.addEventListener("Click",(e)=>{
-//     console.log(e);
-// });
+
+
+//SELECTED BUTTON
+
+//start un-selected
+
+//when clicked
+for(let i=0;i<foodButtons.length;i++){
+    foodButtons[i].addEventListener("click", (e)=>{
+        //clear selected
+        for(let j=0;i<foodButtons.length;j++){
+            console.log(foodButtons[j]);
+            foodButtons[j].classList.remove("selected");
+        }
+        //select clicked
+        foodButtons[i].classList.add("selected");
+    });
+}
+
 
 form.addEventListener('submit',(e)=>{
     e.preventDefault();//dont "send"
