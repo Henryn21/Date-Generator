@@ -1,34 +1,26 @@
   //get form data
+  //html elements, whole form, div holding food buttons, nodelist of each food button
 let form=document.querySelector("form");
-
 let foodButtonDiv=document.querySelector("#food");
-console.log(foodButtonDiv);
-
 let foodButtons=document.querySelectorAll(".foodButton");
-console.log(foodButtons);
-let activity;
-for(let i=0;i<foodButtons.length;i++){
-    console.log(foodButtons[i].value);
-    foodButtons[i].addEventListener("Click",(e)=>{
-        console.log("HI");
-    });
-}
 
+let activity;
 
 //SELECTED BUTTON
+//buttons start un-selected
 
-//start un-selected
 
 //when clicked
 for(let i=0;i<foodButtons.length;i++){
     foodButtons[i].addEventListener("click", (e)=>{
         //clear selected
-        for(let j=0;i<foodButtons.length;j++){
+        for(let j=0;j<foodButtons.length;j++){
             console.log(foodButtons[j]);
-            foodButtons[j].classList.remove("selected");
+            console.log(j);
+            foodButtons[j].style.backgroundColor="#4E0250";
         }
         //select clicked
-        foodButtons[i].classList.add("selected");
+        foodButtons[i].style.backgroundColor="blue";
     });
 }
 
