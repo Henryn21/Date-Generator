@@ -3,27 +3,57 @@
 let form=document.querySelector("form");
 let foodButtonDiv=document.querySelector("#food");
 let foodButtons=document.querySelectorAll(".foodButton");
+let activityButtons=document.querySelectorAll(".activityButton");
 
 let activity;
 
 //SELECTED BUTTON
 //buttons start un-selected
 
+//FOOD
+//select/deselect
 
-//when clicked
+//add listener to each button
 for(let i=0;i<foodButtons.length;i++){
+    //when clicked
     foodButtons[i].addEventListener("click", (e)=>{
         //clear selected
         for(let j=0;j<foodButtons.length;j++){
-            console.log(foodButtons[j]);
-            console.log(j);
             foodButtons[j].style.backgroundColor="#4E0250";
         }
         //select clicked
         foodButtons[i].style.backgroundColor="blue";
     });
 }
+//ACTIVITY
+//select/deselect
 
+//add listener to each button
+for(let i=0;i<activityButtons.length;i++){
+    //when clicked
+    activityButtons[i].addEventListener("click", (e)=>{
+        //clear selected
+        for(let j=0;j<activityButtons.length;j++){
+            activityButtons[j].style.backgroundColor="#4E0250";
+        }
+        //select clicked
+        activityButtons[i].style.backgroundColor="blue";
+    });
+}
+
+//FUNCTION FOR RETURNING SELECTED ANSWERS
+//CHANGE THIS TO TAKE AN ARRAY PARAMETER FOR RE USE!
+function getAnswers(){
+    for(let i=0;i<foodButtons.length;i++){
+        if(foodButtons[i].style.backgroundColor=="blue"){
+            return(foodButtons[i].id);//BUG!
+        }
+        else{
+            return("None Selected");
+        }
+    }
+}
+console.log(getAnswers());
 
 form.addEventListener('submit',(e)=>{
     e.preventDefault();//dont "send"
@@ -32,7 +62,9 @@ form.addEventListener('submit',(e)=>{
     // let food=document.querySelector("#food").value;
     // let activity=document.querySelector("#activity").value;
     console.log(zip);
+    food=getAnswers();
     console.log(food);
+    activity=
     console.log(activity);
 });
 //Bug: Places api not giving right response
