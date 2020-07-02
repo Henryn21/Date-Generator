@@ -42,7 +42,8 @@ for(let i=0;i<activityButtons.length;i++){
 }
 
 //FUNCTION FOR RETURNING SELECTED ANSWERS
-//CHANGE THIS TO TAKE AN ARRAY PARAMETER FOR RE USE!
+
+//For answer buttons
 let selected;
 function getAnswers(buttonList){
     for(let i=0;i<buttonList.length;i++){
@@ -53,6 +54,11 @@ function getAnswers(buttonList){
     return(selected)
 }
 
+//For Zip
+let zipcodeField=document.querySelector("#zip");
+function getZip(){
+    return(zipcodeField.value);
+}
 
 form.addEventListener('submit',(e)=>{
     e.preventDefault();//dont "send"
@@ -60,6 +66,7 @@ form.addEventListener('submit',(e)=>{
     //food and activity buttons dont return value
     // let food=document.querySelector("#food").value;
     // let activity=document.querySelector("#activity").value;
+    zip=getZip();
     console.log(zip);
     food=getAnswers(foodButtons);
     console.log(food);
