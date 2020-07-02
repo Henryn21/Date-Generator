@@ -43,17 +43,16 @@ for(let i=0;i<activityButtons.length;i++){
 
 //FUNCTION FOR RETURNING SELECTED ANSWERS
 //CHANGE THIS TO TAKE AN ARRAY PARAMETER FOR RE USE!
-function getAnswers(){
-    for(let i=0;i<foodButtons.length;i++){
-        if(foodButtons[i].style.backgroundColor=="blue"){
-            return(foodButtons[i].id);//BUG!
-        }
-        else{
-            return("None Selected");
+let selected;
+function getAnswers(buttonList){
+    for(let i=0;i<buttonList.length;i++){
+        if(buttonList[i].style.backgroundColor=="blue"){
+            selected=buttonList[i].id;
         }
     }
+    return(selected)
 }
-console.log(getAnswers());
+
 
 form.addEventListener('submit',(e)=>{
     e.preventDefault();//dont "send"
@@ -62,9 +61,9 @@ form.addEventListener('submit',(e)=>{
     // let food=document.querySelector("#food").value;
     // let activity=document.querySelector("#activity").value;
     console.log(zip);
-    food=getAnswers();
+    food=getAnswers(foodButtons);
     console.log(food);
-    activity=
+    activity=getAnswers(activityButtons);
     console.log(activity);
 });
 //Bug: Places api not giving right response
