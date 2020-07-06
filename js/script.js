@@ -87,10 +87,19 @@ xhr.onreadystatechange=function(){//when state changes
         resultsButton.style.display="block";
     }
 }
+
+//API- GMAPS/PLACES JSON, from HTTP URL with parameters
 //public api test: https://randomuser.me/api/
 //google places API
-////maps.googleapis.com/maps/api/place/findplacefromtext/json?key=AIzaSyBYZMSmO_lrxaddKipkStuvMAvuaDJoU4E
-xhr.open("GET", `https://maps.googleapis.com/maps/api/place/findplacefromtext/json?key=AIzaSyBYZMSmO_lrxaddKipkStuvMAvuaDJoU4E&input=KFC&inputtype=textquery&fields=rating,name,opening_hours `);
+//BETTER BUT COSTS: TEXT SEARCH REQUEST
+//https://maps.googleapis.com/maps/api/place/textsearch/json?query=chicken&key=AIzaSyBYZMSmO_lrxaddKipkStuvMAvuaDJoU4E
+
+//FREE BUT SIMPLE SEARCH: FIND PLACE REQUEST
+//https://maps.googleapis.com/maps/api/place/findplacefromtext/json?key=AIzaSyBYZMSmO_lrxaddKipkStuvMAvuaDJoU4E
+//More parameters request
+//https://maps.googleapis.com/maps/api/place/findplacefromtext/json?key=AIzaSyBYZMSmO_lrxaddKipkStuvMAvuaDJoU4E&input=KFC&inputtype=textquery&fields=rating,name,opening_hours
+
+xhr.open("GET", `https://maps.googleapis.com/maps/api/place/textsearch/json?query=${food}&key=AIzaSyBYZMSmO_lrxaddKipkStuvMAvuaDJoU4E`);
 xhr.send();
 
 //display results
