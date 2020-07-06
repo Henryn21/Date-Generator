@@ -60,19 +60,16 @@ function getZip(){
     return(zipcodeField.value);
 }
 
+//When submit button clicked, all answers entered into variables
 form.addEventListener('submit',(e)=>{
     e.preventDefault();//dont "send"
-    let zip=document.querySelector("#zip").value;
-    //food and activity buttons dont return value
-    // let food=document.querySelector("#food").value;
-    // let activity=document.querySelector("#activity").value;
     zip=getZip();
-    console.log(zip);
     food=getAnswers(foodButtons);
-    console.log(food);
     activity=getAnswers(activityButtons);
-    console.log(activity);
 });
+
+//SENDING TO API AND RESPONSE
+
 //Bug: Places api not giving right response
 //enter form data to google api
 let apiElements=[];
@@ -80,6 +77,7 @@ xhr= new XMLHttpRequest();//request object
 xhr.onreadystatechange=function(){//when state changes
     if(this.readyState===4 && this.status === 200) {//if done
         console.log("done");
+        //returned JSON object from api
         let data=JSON.parse(xhr.responseText);
         console.log(data);
         for(let i=0;i<data.results.length;i++){
@@ -92,7 +90,7 @@ xhr.onreadystatechange=function(){//when state changes
 //public api test: https://randomuser.me/api/
 //google places API
 ////maps.googleapis.com/maps/api/place/findplacefromtext/json?key=AIzaSyBYZMSmO_lrxaddKipkStuvMAvuaDJoU4E
-xhr.open("GET", 'https://randomuser.me/api/');
+xhr.open("GET", 'maps.googleapis.com/maps/api/place/findplacefromtext/json?key=AIzaSyBYZMSmO_lrxaddKipkStuvMAvuaDJoU4E');
 xhr.send();
 
 //display results
