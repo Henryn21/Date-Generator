@@ -66,6 +66,8 @@ form.addEventListener('submit',(e)=>{
     zip=getZip();
     food=getAnswers(foodButtons);
     activity=getAnswers(activityButtons);
+    xhr.open("GET", `https://maps.googleapis.com/maps/api/place/textsearch/json?query=${food}&key=AIzaSyBYZMSmO_lrxaddKipkStuvMAvuaDJoU4E`);
+    xhr.send();
 });
 
 //SENDING TO API AND RESPONSE
@@ -98,9 +100,9 @@ xhr.onreadystatechange=function(){//when state changes
 //https://maps.googleapis.com/maps/api/place/findplacefromtext/json?key=AIzaSyBYZMSmO_lrxaddKipkStuvMAvuaDJoU4E
 //More parameters request
 //https://maps.googleapis.com/maps/api/place/findplacefromtext/json?key=AIzaSyBYZMSmO_lrxaddKipkStuvMAvuaDJoU4E&input=KFC&inputtype=textquery&fields=rating,name,opening_hours
-
-xhr.open("GET", `https://maps.googleapis.com/maps/api/place/textsearch/json?query=${food}&key=AIzaSyBYZMSmO_lrxaddKipkStuvMAvuaDJoU4E`);
-xhr.send();
+//BUG: need to define food variable before request
+// xhr.open("GET", `https://maps.googleapis.com/maps/api/place/textsearch/json?query=${food}&key=AIzaSyBYZMSmO_lrxaddKipkStuvMAvuaDJoU4E`);
+// xhr.send();
 
 //display results
 let resultsButton=document.querySelector("#results");
