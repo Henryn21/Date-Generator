@@ -90,7 +90,7 @@ xhr.onreadystatechange=function(){//when state changes
 //public api test: https://randomuser.me/api/
 //google places API
 ////maps.googleapis.com/maps/api/place/findplacefromtext/json?key=AIzaSyBYZMSmO_lrxaddKipkStuvMAvuaDJoU4E
-xhr.open("GET", 'maps.googleapis.com/maps/api/place/findplacefromtext/json?key=AIzaSyBYZMSmO_lrxaddKipkStuvMAvuaDJoU4E');
+xhr.open("GET", `https://maps.googleapis.com/maps/api/place/findplacefromtext/json?key=AIzaSyBYZMSmO_lrxaddKipkStuvMAvuaDJoU4E?input=KFC`);
 xhr.send();
 
 //display results
