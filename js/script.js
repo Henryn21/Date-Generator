@@ -73,7 +73,11 @@ form.addEventListener('submit',(e)=>{
 //SENDING TO API AND RESPONSE
 
 //Bug: Places api not giving right response
+//CORS issue, need to use a proxy?
+
 //enter form data to google api
+
+//list for returned objects(places)
 let apiElements=[];
 xhr= new XMLHttpRequest();//request object
 xhr.onreadystatechange=function(){//when state changes
@@ -89,7 +93,7 @@ xhr.onreadystatechange=function(){//when state changes
         resultsButton.style.display="block";
     }
 }
-
+console.log(apiElements);
 //API- GMAPS/PLACES JSON, from HTTP URL with parameters
 //public api test: https://randomuser.me/api/
 //google places API
@@ -104,13 +108,18 @@ xhr.onreadystatechange=function(){//when state changes
 // xhr.open("GET", `https://maps.googleapis.com/maps/api/place/textsearch/json?query=${food}&key=AIzaSyBYZMSmO_lrxaddKipkStuvMAvuaDJoU4E`);
 // xhr.send();
 
+
 //display results
+
+//select results button
 let resultsButton=document.querySelector("#results");
+//hide
 resultsButton.style.display="none";
+//when clicked, 5 times(create list item, fill item's html with item at current index, add item to list)
 resultsButton.addEventListener("click",(e)=>{
     for(let i=0;i<5;i++){
         let resultItem=document.createElement("li");
-        resultItem.innerHTML=apiElements[i];
+        resultItem.innerHTML=apiElements[i].;
         document.querySelector("#resultsList").appendChild(resultItem);
     }
     
