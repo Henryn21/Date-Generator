@@ -119,8 +119,8 @@ resultsButton.style.display="none";
 resultsButton.addEventListener("click",(e)=>{
     for(let i=0;i<5;i++){
         let resultItem=document.createElement("li");
-        resultItem.innerHTML=apiElements[i];
-        console.log(apiElements[i]);
+        resultItem.innerHTML=apiElements[i].name;
+        console.log(apiElements[i].name);
         document.querySelector("#resultsList").appendChild(resultItem);
     }
     
