@@ -8,7 +8,7 @@ html, body {
 }
 /*container holds the form(s), with each question: food and activity*/
 .container{
-    background-color:#DB2B39 ;
+    background-color:pink ;
     padding:70px 0;
     
     margin-left: 10%;
@@ -22,7 +22,7 @@ form{
 }
 /*button responses*/
 .ansButton{
-    background-color: #4E0250; 
+    background-color: black; 
     border: none;
     border-radius: 25px;
     color: white;
@@ -37,12 +37,12 @@ form{
     color:white;
     margin-left: 10%;
     margin-right: 10%;
-    background-color: pink;
+    background-color: black;
     border-radius: 25px;
 }
 /*hide for now*/
 #results{
-    background-color: #4E0250; 
+    background-color: black; 
     border: none;
     border-radius: 25px;
     color: white;
