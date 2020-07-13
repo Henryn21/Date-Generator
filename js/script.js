@@ -93,8 +93,7 @@ xhr.onreadystatechange=function(){//when state changes
         resultsButton.style.display="block";
     }
 }
-//remove me!
-console.log(apiElements);
+
 //API- GMAPS/PLACES JSON, from HTTP URL with parameters
 //public api test: https://randomuser.me/api/
 //google places API
@@ -121,6 +120,7 @@ resultsButton.addEventListener("click",(e)=>{
     for(let i=0;i<5;i++){
         let resultItem=document.createElement("li");
         resultItem.innerHTML=apiElements[i];
+        console.log(apiElements[i]);
         document.querySelector("#resultsList").appendChild(resultItem);
     }
     
