@@ -1,18 +1,29 @@
 /*Style for first page, mobile first, quiz*/
 
 html, body {
-    background-color:#D8CBC7 ;
     height: 100%;
     margin: 0;
-    padding:70px 0;
+    background-color: black;
+}
+header{
+    padding: 60px;
+    padding-bottom: 20px;
+    text-align: center;
+    color: white;
+    font-size: 30px;
+    margin:0px;
+    background-color: black;
+    /*background-color: rgb(66, 66, 66);*/
+}
+#title{
+    color:white;
+    text-align: center;
 }
 /*container holds the form(s), with each question: food and activity*/
 .container{
     background-color:pink ;
-    padding:70px 0;
-    
-    margin-left: 10%;
-    margin-right: 10%;
+    padding:70px 0; 
+    margin-bottom:0px ;
 }
 /*form, contains question/button:zip, food, activity*/
 form{
@@ -20,6 +31,19 @@ form{
     text-align: center;
 
 }
+
+#foodDiv{
+    background-color: black; 
+    border: none;
+    border-radius: 25px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
 /*button responses*/
 .ansButton{
     background-color: black; 
@@ -55,5 +79,14 @@ form{
 }
 
 .selected{
+    margin-top:0px ;
     background-color: "blue";
+}
+/*Bottom of page, will hold result lists, Blank before then?*/
+#listSpace{
+    padding: 60px;
+    text-align: center;
+    font-size: 30px;
+    margin:0px;
+    background-color: white; 
 }

@@ -4,33 +4,43 @@
         <link rel="stylesheet" type="text/css" href="style.css"> 
     </head>
     <body>
+        <header>
+            <h1 id="title">Date Generator</h1>
+        </header>
         <div class="container">
             <form>
-                <div id="location">
-                <!--Form for location-->
-                <label for="zip">Enter Zipcode</label><br>
-                <input type="number" id="zip">
-                </div>
-
-                <div id="food">
-                <!--Form for food preference-->
-                <input type="button" id="Mexican" value="Mexican" class="foodButton ansButton">
-                <input type="button" id="Italian" value="Italian" class="foodButton ansButton">
-                <input type="button" id="American" value="American" class="foodButton ansButton">
-                </div>
-
-                <div id="activity">
-                <!--Form for activity preference-->
-                <input type="button" id="Park" value="Park" class="activityButton ansButton">
-                <input type="button" id="Event" value="Event" class="activityButton ansButton">
-                <input type="button" id="Game" value="Game" class="activityButton ansButton">
-                </div>
+                <!--Middle of page-->
+                <div id="questionsDiv">
+                    <div id="foodDiv">
+                    <!--Form for food preference-->
+                        <label for="foodList">Choose a type of food:</label>
+                        <select id="foodList" name="foodList">
+                            <option value="American">American</option>
+                            <option value="Mexican">Mexican</option>
+                            <option value="Italian">Italian</option>
+                            <option value="Asian">Asian</option>
+                        </select>
+                    </div>
+    
+                    <div id="activityDiv">
+                    <!--Form for activity preference-->
+                        <label for="ActivityList">Choose a type of Activity:</label>
+                        <select id="activtityList" name="ActivityList">
+                            <option value="Arcade">Arcade</option>
+                            <option value="Park">Park</option>
+                            <option value="Bowling">Bowling</option>
+                            <option value="Movie">Movie</option>
+                        </select>
+                    </div>
                 <button type="submit">DONE</button>
+                </div>
             </form>
             <button id="results">Results</button>
             <ol id="resultsList"></ol>
         </div>
-    
+        <div id="listSpace">
+            <p>THE RESULT LISTS</p>
+        </div>
     <script src=js/script.js></script>
     </body>
 </html>
