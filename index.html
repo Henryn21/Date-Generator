@@ -24,22 +24,33 @@
     
                     <div id="activityDiv">
                     <!--Form for activity preference-->
-                        <label for="ActivityList">Choose a type of Activity:</label>
-                        <select id="activtityList" name="ActivityList">
+                        <label for="activityList">Choose a type of activity:</label>
+                        <select id="activityList" name="activityList">
                             <option value="Arcade">Arcade</option>
                             <option value="Park">Park</option>
                             <option value="Bowling">Bowling</option>
                             <option value="Movie">Movie</option>
                         </select>
                     </div>
-                <button type="submit">DONE</button>
+                
                 </div>
+                <button id="doneButton" type="submit">DONE</button>
             </form>
             <button id="results">Results</button>
             <ol id="resultsList"></ol>
         </div>
+        <div id="listTitle">
+            <p id="resultsText">THE RESULT LISTS</p>
+        </div>
         <div id="listSpace">
-            <p>THE RESULT LISTS</p>
+             <ol id="foodResult" class="resultListClass">
+                <li>BOOP</li>
+                <li>BEEP</li>
+             </ol>
+             <ol id="activityResult" class="resultListClass">
+                <li>BEEP</li>
+                <li>BOOP</li>
+            </ol>
         </div>
     <script src=js/script.js></script>
     </body>

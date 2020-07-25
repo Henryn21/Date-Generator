@@ -5,9 +5,10 @@ html, body {
     margin: 0;
     background-color: black;
 }
+/*Title at top of page*/
 header{
     padding: 60px;
-    padding-bottom: 20px;
+  
     text-align: center;
     color: white;
     font-size: 30px;
@@ -25,45 +26,65 @@ header{
     padding:70px 0; 
     margin-bottom:0px ;
 }
-/*form, contains question/button:zip, food, activity*/
+/*form, contains question/dropdown:zip, food, activity*/
 form{
     
     text-align: center;
 
 }
 
+
+/*Dropdowns*/
+#foodList{
+    background:black;
+    color:white;
+    font-size: 32px;
+    border-color: black;
+}
+#activityList{
+    background:black;
+    color:white;
+    font-size: 32px;
+    border-color: black;
+}
+/*Question Boxes*/
 #foodDiv{
     background-color: black; 
     border: none;
-    border-radius: 25px;
     color: white;
-    padding: 15px 32px;
+    padding: 16px 32px;
+    padding-right: 0px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 16px;
+    font-size: 32px;
 }
-
-/*button responses*/
-.ansButton{
+#activityDiv{
     background-color: black; 
     border: none;
-    border-radius: 25px;
     color: white;
-    padding: 15px 32px;
+    padding: 16px 32px;
+    padding-right: 0px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 16px;
+    font-size: 32px;
 }
-/*zip code styling*/
-#location{
-    color:white;
-    margin-left: 10%;
-    margin-right: 10%;
-    background-color: black;
-    border-radius: 25px;
+#questionsDiv{
+    display: block;
+    margin:auto;
 }
+/*Done button*/
+#doneButton{
+    margin: 10px;
+    background-color: black; 
+    border: none;
+    color: white;
+    padding: 16px;
+    text-align: center;
+    font-size: 32px;
+}
+
 /*hide for now*/
 #results{
     background-color: black; 
@@ -83,10 +104,18 @@ form{
     background-color: "blue";
 }
 /*Bottom of page, will hold result lists, Blank before then?*/
-#listSpace{
+#listTitle{
     padding: 60px;
     text-align: center;
     font-size: 30px;
     margin:0px;
     background-color: white; 
+}
+/*Will fill empty lists with li's using JS+GMaps API*/
+#listSpace{
+
+}
+.resultListClass{
+    color: aliceblue;
+    padding:25px;
 }
