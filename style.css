@@ -1,5 +1,5 @@
 /*Style for first page, mobile first, quiz*/
-
+/*FIX? the css*/
 html, body {
     height: 100%;
     margin: 0;
@@ -30,7 +30,7 @@ header{
 form{
     
     text-align: center;
-
+    
 }
 
 
