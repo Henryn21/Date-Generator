@@ -116,10 +116,17 @@ form{
     background-color: pink;
     text-align: center;
 }
+/*Lists of results for both, centered and not tiny, maybe hide*/
 .resultListClass{
     color: white;
     padding:25px;
     background-color: black;
     display: inline-block;
+    /*Unsure of this one*/
+    min-width: 400px;
+}
+/*Should be on left*/
+#foodResult{
+    margin-right:25px;
     
 }
