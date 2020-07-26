@@ -5,6 +5,18 @@ html, body {
     margin: 0;
     background-color: black;
 }
+/*TitleColors+font*/
+#dateTitle{
+    color:pink;
+    font-family: Brush Script MT, Brush Script Std, cursive;
+}
+#generatorTitle{
+    color:grey;
+    font-family:Courier New, monospace;
+}
+#Title{
+    color:pink;
+}
 /*Title at top of page*/
 header{
     padding: 60px;
