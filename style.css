@@ -113,9 +113,13 @@ form{
 }
 /*Will fill empty lists with li's using JS+GMaps API*/
 #listSpace{
-
+    background-color: pink;
+    text-align: center;
 }
 .resultListClass{
-    color: aliceblue;
+    color: white;
     padding:25px;
+    background-color: black;
+    display: inline-block;
+    
 }
