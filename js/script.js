@@ -18,9 +18,9 @@ form.addEventListener('submit',(e)=>{
 
     //create url to send
     //food
-    let foodSearch=`maps.googleapis.com/maps/api/place/findplacefromtext/json?key=AIzaSyBYZMSmO_lrxaddKipkStuvMAvuaDJoU4E&query=${food}`;
+    let foodSearch=`https://maps.googleapis.com/maps/api/place/textsearch/json?key=AIzaSyBYZMSmO_lrxaddKipkStuvMAvuaDJoU4E&query=${food}`;
     //activity
-    let activitySearch=`maps.googleapis.com/maps/api/place/findplacefromtext/json?key=AIzaSyBYZMSmO_lrxaddKipkStuvMAvuaDJoU4E&query=${activity}`;
+    let activitySearch=`https://maps.googleapis.com/maps/api/place/textsearch/json?key=AIzaSyBYZMSmO_lrxaddKipkStuvMAvuaDJoU4E&query=${activity}`;
 
     //send API request using responses
     xhr.open("GET", foodSearch);
