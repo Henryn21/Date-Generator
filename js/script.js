@@ -28,34 +28,26 @@ form.addEventListener('submit',(e)=>{
 
 });
 //enter form data to google api
+//empty list to fill with resutls from returned json
 let apiElements=[];
 xhr= new XMLHttpRequest();//request object
 xhr.onreadystatechange=function(){//when state changes
     if(this.readyState===4 && this.status === 200) {//if done
         console.log("done");
+        //assign json to variable(JSON object)
         let data=JSON.parse(xhr.responseText);
-        console.log(data);
+        console.log(data.results[0].name);
+        //fill list
         for(let i=0;i<data.results.length;i++){
-            apiElements[i]=data.results[i];//list of results
+            apiElements[i]=data;//list of results
         }
-        console.log(apiElements);
-        resultsButton.style.display="block";
+        //append 5 names to list
+        for(let i=0;i<5;i++){
+            let resultItem=document.createElement("li");
+            resultItem.innerHTML=apiElements[i].results[i].name;
+            document.querySelector("#foodResult").appendChild(resultItem);
+        }
     }
 }
-//public api test: https://randomuser.me/api/
-//google places API
-////maps.googleapis.com/maps/api/place/findplacefromtext/json?key=AIzaSyBYZMSmO_lrxaddKipkStuvMAvuaDJoU4E
 
 
-//display results
-let resultsButton=document.querySelector("#results");
-resultsButton.style.display="none";
-resultsButton.addEventListener("click",(e)=>{
-    for(let i=0;i<5;i++){
-        let resultItem=document.createElement("li");
-        resultItem.innerHTML=apiElements[i];
-        document.querySelector("#resultsList").appendChild(resultItem);
-    }
-    
-});
-// let xhr= XMLHttpRequest();
