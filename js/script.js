@@ -15,12 +15,12 @@ form.addEventListener('submit',(e)=>{
 
     console.log(food);
     console.log(activity);
-
+    //FIXED CORS BUG
     //create url to send
     //food
-    let foodSearch=`https://maps.googleapis.com/maps/api/place/textsearch/json?key=AIzaSyBYZMSmO_lrxaddKipkStuvMAvuaDJoU4E&query=${food}`;
+    let foodSearch=`https://cors-anywhere.herokuapp.com/maps.googleapis.com/maps/api/place/textsearch/json?key=AIzaSyBYZMSmO_lrxaddKipkStuvMAvuaDJoU4E&query=${food}`;
     //activity
-    let activitySearch=`https://maps.googleapis.com/maps/api/place/textsearch/json?key=AIzaSyBYZMSmO_lrxaddKipkStuvMAvuaDJoU4E&query=${activity}`;
+    let activitySearch=`https://cors-anywhere.herokuapp.com/maps.googleapis.com/maps/api/place/textsearch/json?key=AIzaSyBYZMSmO_lrxaddKipkStuvMAvuaDJoU4E&query=${activity}`;
 
     //send API request using responses
     //for food
